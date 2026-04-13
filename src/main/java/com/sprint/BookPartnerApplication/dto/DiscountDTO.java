@@ -72,7 +72,3 @@ public class DiscountDTO {
         this.discounttype = discounttype;
     }
 }
-    public void setDiscount(BigDecimal discount) {
-        this.discount = discount;
-    }
-}

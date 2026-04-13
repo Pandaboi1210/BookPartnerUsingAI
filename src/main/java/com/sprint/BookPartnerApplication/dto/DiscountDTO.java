@@ -9,16 +9,18 @@ public class DiscountDTO {
     private Integer lowqty;
     private Integer highqty;
     private BigDecimal discount;
+    private String discounttype;
     
     // Constructors
     public DiscountDTO() {}
     
-    public DiscountDTO(Long discountId, String storeId, Integer lowqty, Integer highqty, BigDecimal discount) {
+    public DiscountDTO(Long discountId, String storeId, Integer lowqty, Integer highqty, BigDecimal discount, String discounttype) {
         this.discountId = discountId;
         this.storeId = storeId;
         this.lowqty = lowqty;
         this.highqty = highqty;
         this.discount = discount;
+        this.discounttype = discounttype;
     }
     
     // Getters and Setters
@@ -58,6 +60,18 @@ public class DiscountDTO {
         return discount;
     }
     
+    public void setDiscount(BigDecimal discount) {
+        this.discount = discount;
+    }
+    
+    public String getDiscounttype() {
+        return discounttype;
+    }
+    
+    public void setDiscounttype(String discounttype) {
+        this.discounttype = discounttype;
+    }
+}
     public void setDiscount(BigDecimal discount) {
         this.discount = discount;
     }

@@ -21,7 +21,8 @@ public class DiscountMapper {
             discount.getStore() != null ? discount.getStore().getStorId() : null,
             discount.getLowqty(),
             discount.getHighqty(),
-            discount.getDiscount()
+            discount.getDiscount(),
+            discount.getDiscounttype()
         );
     }
     
@@ -37,6 +38,7 @@ public class DiscountMapper {
         discount.setLowqty(dto.getLowqty());
         discount.setHighqty(dto.getHighqty());
         discount.setDiscount(dto.getDiscount());
+        discount.setDiscounttype(dto.getDiscounttype());
         return discount;
     }
 }

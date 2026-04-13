@@ -25,14 +25,18 @@ public class Discount {
     @Column(name = "discount")
     private BigDecimal discount;
     
+    @Column(name = "discounttype")
+    private String discounttype;
+    
     // Constructors
     public Discount() {}
     
-    public Discount(Store store, Integer lowqty, Integer highqty, BigDecimal discount) {
+    public Discount(Store store, Integer lowqty, Integer highqty, BigDecimal discount, String discounttype) {
         this.store = store;
         this.lowqty = lowqty;
         this.highqty = highqty;
         this.discount = discount;
+        this.discounttype = discounttype;
     }
     
     // Getters and Setters
@@ -74,5 +78,13 @@ public class Discount {
     
     public void setDiscount(BigDecimal discount) {
         this.discount = discount;
+    }
+    
+    public String getDiscounttype() {
+        return discounttype;
+    }
+    
+    public void setDiscounttype(String discounttype) {
+        this.discounttype = discounttype;
     }
 }
